@@ -39,14 +39,14 @@ function calculateLongJumpDistance() {
     }
 
     const g = 9.807; // acceleration due to gravity in m/s^2
-    const sin67_5 = 0.92388; // approximate value of sin(67.5 degrees)
-    const sin45 = 0.7071; // approximate value of sin(45 degrees)
+    const sin69 = 0.93358; // approximate value of sin(69 degrees)
+    const sin42 = 0.66913; // approximate value of sin(42 degrees)
 
-    const term1 = Math.pow(userSpeed * sin67_5, 2) / g * sin45;
-    const term2 = userLength * sin67_5;
+    const term1 = Math.pow(userSpeed * sin69, 2) / g * sin42;
+    const term2 = userLength * sin69;
 
-    const longJumpDistanceMin = (term1 + term2) * kMin * 0.95;
-    const longJumpDistanceMax = (term1 + term2) * kMax * 0.95;
+    const longJumpDistanceMin = (term1 + term2) * kMin * 0.97;
+    const longJumpDistanceMax = (term1 + term2) * kMax * 0.97;
 
     document.getElementById("result").innerHTML = `Your estimated long jump range: ${longJumpDistanceMin.toFixed(2)} m to ${longJumpDistanceMax.toFixed(2)} m`;
 }
