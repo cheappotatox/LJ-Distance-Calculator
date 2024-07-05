@@ -45,8 +45,8 @@ function calculateLongJumpDistance() {
     const term1 = Math.pow(userSpeed * sin67_5, 2) / g * sin45;
     const term2 = userLength * sin67_5;
 
-    const longJumpDistanceMin = (term1 + term2) * kMin;
-    const longJumpDistanceMax = (term1 + term2) * kMax;
+    const longJumpDistanceMin = (term1 + term2) * kMin * 0.95;
+    const longJumpDistanceMax = (term1 + term2) * kMax * 0.95;
 
     document.getElementById("result").innerHTML = `Your estimated long jump range: ${longJumpDistanceMin.toFixed(2)} m to ${longJumpDistanceMax.toFixed(2)} m`;
 }
