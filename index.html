@@ -4,32 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Top Speed Calculator</title>
+    <title>Approach Speed vs Long Jump Distance Calculator</title>
     <style>
         
     </style>
 </head>
 <body>
     <div class="calculator">
-        <h2>Top Speed Calculator</h2>
-        <label for="userTime">Enter 100m Time (seconds):</label>
-        <input type="number" id="userTime" step="0.01" placeholder="e.g., 10.5">
-
-        <label for="splitTime">Enter 60m Split Time (seconds):</label>
-        <input type="number" id="splitTime" step="0.01" placeholder="e.g., 6.4">
-
-        <button onclick="calculateAdjustedTopSpeed()">Calculate Top Speed</button>
-        <div id="result"></div>
-    </div>
-    <div class="text-box">
-        <strong>Context:</strong>
-        <div class="text1">If your 60m time is <strong>64%</strong> or less of your total 100m time, that is considered an <strong>extremely fast</strong> start. </div>
-        <div class="text2">If your 60m time is between <strong>64%-64.5%</strong> of you total 100m time, that is considered a <strong>fast</strong> start.</div> 
-        <div class="text3">If your 60m time is <strong>64.5%-65.5%</strong> of your total 100m time, that is considered an <strong>average</strong> start.</div> 
-        <div class="text4">If your 60m time is <strong>65.5%-66%</strong> of your total 100m time, that is considered a <strong>slow</strong> start.</div> 
-        <div class="text5">If your 60m time is <strong>66%</strong> or more of you total 100m time, that is considered an <strong>extremely slow</strong> start.</div>
-    </div>
-
-    <script src="topspeed.js"></script>
+        <h2>Approach Speed vs Long Jump Distance Calculator</h2>
+        <input type="text" id="userSpeed" placeholder="Enter your approach velocity (m/s)">
+        <input type="text" id="userLength" placeholder="Enter your apparent leg length (m)">
+        <br>
+        <label for="jumperType">Select your jumper type:</label>
+        <br>
+        <input type="radio" id="speed" name="jumperType" value="speed">
+        <label for="speed">Speed</label>
+        <br>
+        <input type="radio" id="neutral" name="jumperType" value="neutral">
+        <label for="neutral">Neutral</label>
+        <br>
+        <input type="radio" id="power" name="jumperType" value="power">
+        <label for="power">Power</label>
+        <br>
+        <button onclick="calculateLongJumpDistance()">Calculate</button>
+    <div id="result"></div>
+    
+    <script src="LJDistance.js"></script>
 </body>
 </html>
