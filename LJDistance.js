@@ -36,8 +36,6 @@ function calculateLongJumpDistance() {
         default:
             alert("Invalid jumper type selected.");
             return;
-
-        // 0.27 - 0.29, 0.29 - 0.31, 0.31 - 0.33
     }
 
     const g = 9.807; // acceleration due to gravity in m/s^2
