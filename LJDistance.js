@@ -22,7 +22,7 @@ function calculateLongJumpDistance() {
     let kMin, kMax;
     switch (jumperType.value) {
         case "speed":
-            kMin = 1.00;
+            kMin = 0.97;
             kMax = 1.03;
             break;
         case "neutral":
@@ -31,11 +31,13 @@ function calculateLongJumpDistance() {
             break;
         case "power":
             kMin = 1.06;
-            kMax = 1.09;
+            kMax = 1.12;
             break;
         default:
             alert("Invalid jumper type selected.");
             return;
+
+        // 0.27 - 0.3, 0.3 - 0.315, 0.315 - 0.345
     }
 
     const g = 9.807; // acceleration due to gravity in m/s^2
@@ -45,8 +47,8 @@ function calculateLongJumpDistance() {
     const term1 = Math.pow(userSpeed * sin69, 2) / g * sin42;
     const term2 = userLength * sin69;
 
-    const longJumpDistanceMin = (term1 + term2) * kMin * 0.98;
-    const longJumpDistanceMax = (term1 + term2) * kMax * 0.98;
+    const longJumpDistanceMin = (term1 + term2) * kMin;
+    const longJumpDistanceMax = (term1 + term2) * kMax;
 
     document.getElementById("result").innerHTML = `Your estimated long jump range: ${longJumpDistanceMin.toFixed(2)} m to ${longJumpDistanceMax.toFixed(2)} m`;
 }
