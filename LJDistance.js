@@ -22,7 +22,7 @@ function calculateLongJumpDistance() {
     let kMin, kMax;
     switch (jumperType.value) {
         case "speed":
-            kMin = 0.97;
+            kMin = 1.00;
             kMax = 1.03;
             break;
         case "neutral":
@@ -31,13 +31,13 @@ function calculateLongJumpDistance() {
             break;
         case "power":
             kMin = 1.06;
-            kMax = 1.12;
+            kMax = 1.09;
             break;
         default:
             alert("Invalid jumper type selected.");
             return;
 
-        // 0.27 - 0.3, 0.3 - 0.315, 0.315 - 0.345
+        // 0.27 - 0.29, 0.29 - 0.31, 0.31 - 0.33
     }
 
     const g = 9.807; // acceleration due to gravity in m/s^2
