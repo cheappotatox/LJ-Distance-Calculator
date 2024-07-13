@@ -22,23 +22,23 @@ function calculateLongJumpDistance() {
     let kMin, kMax;
     switch (jumperType.value) {
         case "speed":
-            kMin = 1.00;
-            kMax = 1.03;
+            kMin = 1.02;
+            kMax = 1.04;
             break;
         case "neutral":
-            kMin = 1.03;
+            kMin = 1.04;
             kMax = 1.06;
             break;
         case "power":
             kMin = 1.06;
-            kMax = 1.09;
+            kMax = 1.08;
             break;
         default:
             alert("Invalid jumper type selected.");
             return;
     }
 
-    const g = 9.807; // acceleration due to gravity in m/s^2
+    const g = 9.80665; // acceleration due to gravity in m/s^2
     const sin69 = 0.93358; // approximate value of sin(69 degrees)
     const sin42 = 0.66913; // approximate value of sin(42 degrees)
 
