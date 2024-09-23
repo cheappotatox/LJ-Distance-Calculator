@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Approach Speed vs Long Jump Distance Calculator</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Approach Speed vs Long Jump Distance Calculator</h2>
+        <input type="text" id="userSpeed" placeholder="Enter your approach speed (m/s)">
+        <input type="text" id="userLength" placeholder="Enter your apparent leg length (m)">
+        <br>
+        <label for="jumperType">Select your jumper type:</label>
+        <br>
+        <input type="radio" id="speed" name="jumperType" value="speed">
+        <label for="speed">Speed</label>
+        <br>
+        <input type="radio" id="neutral" name="jumperType" value="neutral">
+        <label for="neutral">Neutral</label>
+        <br>
+        <input type="radio" id="power" name="jumperType" value="power">
+        <label for="power">Power</label>
+        <br>
+        <button onclick="calculateLongJumpDistance()">Calculate</button>
+    <div id="result"></div>
+    
+    <div class="text">
+        <strong>Note: This is your estimated range of distance according to your inputs if you have optimal technique, proper footwear, perfect border, and perfect non-assisted conditions (+0.0 wind, 0 m elevation, flat track surface etc...)</strong>
+    </div>
+    
+    <script src="LJDistance.js"></script>
+</body>
+</html>
