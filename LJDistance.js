@@ -22,16 +22,16 @@ function calculateLongJumpDistance() {
     let kMin, kMax;
     switch (jumperType.value) {
         case "speed":
-            kMin = 1.02;
-            kMax = 1.04;
-            break;
-        case "neutral":
             kMin = 1.04;
             kMax = 1.06;
             break;
-        case "power":
+        case "neutral":
             kMin = 1.06;
             kMax = 1.08;
+            break;
+        case "power":
+            kMin = 1.08;
+            kMax = 1.10;
             break;
         default:
             alert("Invalid jumper type selected.");
