@@ -9,7 +9,7 @@ function calculateLongJumpDistance() {
     const userLength = parseFloat(document.getElementById("userLength").value);
 
     if (isNaN(userLength) || userLength <= 0) {
-        alert("Please enter a valid positive numeric value for the length of your greater trochanter.");
+        alert("Please enter a valid positive numeric value for the distance of your center of mass to floor.");
         return;
     }
 
